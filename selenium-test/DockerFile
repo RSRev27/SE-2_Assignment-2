@@ -1,0 +1,51 @@
+# Use an official Maven image as the base image
+FROM maven:3.6.0-jdk-11-slim AS build
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the entire project into the container
+COPY . .
+
+# Run the Maven build to download dependencies and compile the project
+RUN mvn clean install
+
+# Install Chrome for Selenium to interact with
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    xvfb \
+    libxi6 \
+    libgconf-2-4 \
+    default-jdk \
+    && wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    && dpkg -i google-chrome-stable_current_amd64.deb || apt-get -fy install \
+    && rm google-chrome-stable_current_amd64.deb
+
+# Download and set up ChromeDriver
+RUN wget https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.58/linux64/chromedriver-linux64.zip \
+    && unzip chromedriver_linux64.zip -d /usr/local/bin/chromedriver \
+    #&& mv chromedriver /usr/local/bin/chromedriver \
+    && chmod +x /usr/local/bin/chromedriver \
+    && rm chromedriver_linux64.zip
+
+# Install necessary dependencies
+RUN apt-get update && \
+    apt-get install -y wget curl gnupg2 apt-transport-https software-properties-common && \
+    curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
+    curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/microsoft-prod.list && \
+    apt-get update && \
+    apt-get install -y microsoft-edge-stable
+
+# Install Edge WebDriver
+RUN wget -O /usr/local/bin/msedgedriver https://msedgedriver.azureedge.net/130.0.2849.46/edgedriver_linux64.zip && \
+    unzip msedgedriver_linux64.zip && \
+    chmod +x /usr/local/bin/msedgedriver && \
+    rm msedgedriver_linux64.zip
+	
+# Set environment variable for ChromeDriver
+ENV CHROME_DRIVER_PATH=/usr/local/bin/chromedriver
+ENV CHROME_DRIVER_PATH=/usr/local/bin/msedgedriver
+
+# Default command to run tests
+CMD ["mvn", "test"]

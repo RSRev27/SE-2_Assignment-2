@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AllTests" verbose="1">
+    <test name="TestGroup">
+        <classes>
+            <!-- <class name="com.assignment2.selenium_test.DriverCall"/>
+            <class name="com.assignment2.selenium_test.MyTestCase"/>-->
+            <class name="test.com.assignment2.selenium_test.SelinumTest"/>
+        </classes>
+    </test>
+</suite>
