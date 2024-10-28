@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.assignment2.selenium_test.DriverCall;
 import com.assignment2.selenium_test.MyTestCase;
-import com.assignment2.selenium_test.utils.ConstantsXPath;
+import com.assignment2.selenium_test.utils.ElementsConstants;
 
 //@Testable
 @TestMethodOrder(OrderAnnotation.class)
@@ -52,8 +52,8 @@ public class SelinumTest {
 		wait = new WebDriverWait(driver, 10);
 
 		// driver.switchTo().defaultContent();
-		element = driver.findElement(ConstantsXPath.COOKIES_POLICY_ACCEPTANCE);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ConstantsXPath.COOKIES_POLICY_ACCEPTANCE));
+		element = driver.findElement(ElementsConstants.COOKIES_POLICY_ACCEPTANCE);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ElementsConstants.COOKIES_POLICY_ACCEPTANCE));
 		// driver.switchTo().defaultContent();
 		// if (element.isEnabled()) {
 		// element.submit();
@@ -83,9 +83,9 @@ public class SelinumTest {
 
 	// @ParameterizedTest()
 	// @ValueSource(strings = { "chrome", "edge" })
-	@Order(1)
-	@Test // (expectedExceptions = InterruptedException.class)
-	public void testLoginWithWrongCreds() throws Exception {
+	//@Order(1)
+	//@Test // (expectedExceptions = InterruptedException.class)
+	//public void testLoginWithWrongCreds() throws Exception {
 		/*
 		 * Scanner scan = new Scanner(System.in); String browserName =
 		 * "Edge";//scan.next(); scan.close();
@@ -97,20 +97,25 @@ public class SelinumTest {
 		// driver.get("https://www.google.com");
 
 		// MyTestCase myTestCase = new MyTestCase();
-		myTestCase.loginWithInvalidCreds(driver, element, wait, props);
+		
+		
+		//myTestCase.loginWithInvalidCreds(driver, element, wait, props);
+		
+		
+		
 		// myTestCase.loginWithCorrectCreds(driver, props);
 
 		// Thread.sleep(10000);
 
 		// driver.quit();
 		// scan.close();
-	}
+	//}
 
-	@Order(2)
-	@Test
-	public void testLoginWithWrongCreds1() throws Exception {
-		myTestCase.loginWithInvalidCreds1(driver, element, wait, props);
-	}
+	//@Order(2)
+	//@Test
+	//public void testLoginWithWrongCreds1() throws Exception {
+		//myTestCase.loginWithInvalidCreds1(driver, element, wait, props);
+	//}
 
 	@Order(3)
 	@Test

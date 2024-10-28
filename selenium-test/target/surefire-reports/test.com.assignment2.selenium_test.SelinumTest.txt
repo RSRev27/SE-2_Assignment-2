@@ -1,4 +1,190 @@
 -------------------------------------------------------------------------------
 Test set: test.com.assignment2.selenium_test.SelinumTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.06 s -- in test.com.assignment2.selenium_test.SelinumTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 30.73 s <<< FAILURE! -- in test.com.assignment2.selenium_test.SelinumTest
+test.com.assignment2.selenium_test.SelinumTest.testLoginWithWrongCreds -- Time elapsed: 10.27 s <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created
+from unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'codespaces-5e54c8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-1025-azure', java.version: '11.0.14.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5f7951c580aa <unknown>
+#1 0x5f795176f1a0 <unknown>
+#2 0x5f79517a2683 <unknown>
+#3 0x5f79517a0885 <unknown>
+#4 0x5f79517ebec6 <unknown>
+#5 0x5f79517eb516 <unknown>
+#6 0x5f79517dfb23 <unknown>
+#7 0x5f79517ae990 <unknown>
+#8 0x5f79517af96e <unknown>
+#9 0x5f7951c2416b <unknown>
+#10 0x5f7951c27f68 <unknown>
+#11 0x5f7951c1164c <unknown>
+#12 0x5f7951c28ae7 <unknown>
+#13 0x5f7951bf64af <unknown>
+#14 0x5f7951c464f8 <unknown>
+#15 0x5f7951c466c0 <unknown>
+#16 0x5f7951c56f26 <unknown>
+#17 0x78e9f8a4c609 start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at com.assignment2.selenium_test.DriverCall.chromeDriverCall(DriverCall.java:36)
+	at com.assignment2.selenium_test.DriverCall.driverCall(DriverCall.java:24)
+	at test.com.assignment2.selenium_test.SelinumTest.testSetUp(SelinumTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: java.lang.NullPointerException
+		at test.com.assignment2.selenium_test.SelinumTest.testTearDown(SelinumTest.java:80)
+		... 3 more
+
+test.com.assignment2.selenium_test.SelinumTest.testLoginWithWrongCreds1 -- Time elapsed: 10.19 s <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created
+from unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'codespaces-5e54c8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-1025-azure', java.version: '11.0.14.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5c1bfb60f0aa <unknown>
+#1 0x5c1bfb1261a0 <unknown>
+#2 0x5c1bfb159683 <unknown>
+#3 0x5c1bfb157885 <unknown>
+#4 0x5c1bfb1a2ec6 <unknown>
+#5 0x5c1bfb1a2516 <unknown>
+#6 0x5c1bfb196b23 <unknown>
+#7 0x5c1bfb165990 <unknown>
+#8 0x5c1bfb16696e <unknown>
+#9 0x5c1bfb5db16b <unknown>
+#10 0x5c1bfb5def68 <unknown>
+#11 0x5c1bfb5c864c <unknown>
+#12 0x5c1bfb5dfae7 <unknown>
+#13 0x5c1bfb5ad4af <unknown>
+#14 0x5c1bfb5fd4f8 <unknown>
+#15 0x5c1bfb5fd6c0 <unknown>
+#16 0x5c1bfb60df26 <unknown>
+#17 0x793cc296d609 start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at com.assignment2.selenium_test.DriverCall.chromeDriverCall(DriverCall.java:36)
+	at com.assignment2.selenium_test.DriverCall.driverCall(DriverCall.java:24)
+	at test.com.assignment2.selenium_test.SelinumTest.testSetUp(SelinumTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: java.lang.NullPointerException
+		at test.com.assignment2.selenium_test.SelinumTest.testTearDown(SelinumTest.java:80)
+		... 3 more
+
+test.com.assignment2.selenium_test.SelinumTest.testLoginWithCorrectCreds -- Time elapsed: 10.26 s <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created
+from unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'codespaces-5e54c8', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-1025-azure', java.version: '11.0.14.1'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x6399101620aa <unknown>
+#1 0x63990fc791a0 <unknown>
+#2 0x63990fcac683 <unknown>
+#3 0x63990fcaa885 <unknown>
+#4 0x63990fcf5ec6 <unknown>
+#5 0x63990fcf5516 <unknown>
+#6 0x63990fce9b23 <unknown>
+#7 0x63990fcb8990 <unknown>
+#8 0x63990fcb996e <unknown>
+#9 0x63991012e16b <unknown>
+#10 0x639910131f68 <unknown>
+#11 0x63991011b64c <unknown>
+#12 0x639910132ae7 <unknown>
+#13 0x6399101004af <unknown>
+#14 0x6399101504f8 <unknown>
+#15 0x6399101506c0 <unknown>
+#16 0x639910160f26 <unknown>
+#17 0x7b99ed32f609 start_thread
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at com.assignment2.selenium_test.DriverCall.chromeDriverCall(DriverCall.java:36)
+	at com.assignment2.selenium_test.DriverCall.driverCall(DriverCall.java:24)
+	at test.com.assignment2.selenium_test.SelinumTest.testSetUp(SelinumTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: java.lang.NullPointerException
+		at test.com.assignment2.selenium_test.SelinumTest.testTearDown(SelinumTest.java:80)
+		... 3 more
+
